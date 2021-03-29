@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,3 +36,68 @@
     transform: rotate(360deg);
   }
 }
+
+.main{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+
+}
+
+.message-summary{
+  display: flex;
+  border: thin solid black;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  grid-column: 1/2;
+}
+
+.reading-pane{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background-color: grey;
+  grid-column: 2 / 3;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.reading-pane .message-summary{
+  border: none;
+}
+
+.new-message form{
+  background-color: rgb(178, 221, 235);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+#message-to-send{
+  margin: 10px;
+  min-height: 200px;
+  min-width: 400px;
+}
+
+#to-field{
+  margin-right: 5px;
+}
+
+#subject-field{
+  min-width: 450px;
+}
+
+button#inbox{
+  margin-right: 5px;
+}
+
+button#compose {
+  margin: 5px;
+}
+
+#logo{
+  display: inline;
+  width: 10%;
+  height: 10%;
+}
+
