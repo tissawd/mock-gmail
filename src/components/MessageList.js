@@ -5,7 +5,9 @@ const MessageList = function(props){
     <div>
       {props.messages.map((message) => {
         return(
-          <EmailMessage message={message}/>
+          <div onClick={(e) => props.selectMessage(message)}>
+            <EmailMessage message={message}/>
+          </div>
           )
       })}
     </div>
