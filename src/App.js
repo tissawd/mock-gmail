@@ -27,7 +27,7 @@ class App extends React.Component {
     async function fetchMessages(endpoint){
       let messagesRaw = await fetch(endpoint)
       let messagesArray = await messagesRaw.json();
-      console.log(messagesArray);
+      // console.log(messagesArray);
       this.setState((state) => {
         return {
           messages: messagesArray,
@@ -45,7 +45,7 @@ class App extends React.Component {
         }
       );
     });
-    console.log(this.state.selectedMessage);
+    // console.log(this.state.selectedMessage);
   };
 
   openComposer(){
@@ -81,10 +81,13 @@ class App extends React.Component {
           <aside className="inbox">
             <MessageList selectMessage={this.setReadingPane} messages={this.state.messages} />
           </aside>
-          <div className="reading-pane">
-            <EmailMessage message={this.state.selectedMessage}/>
-            <p>{this.state.selectedMessage.message}</p>
-          </div>
+          {this.state.selectedMessage.id ?
+            <div className="reading-pane">
+              <EmailMessage message={this.state.selectedMessage}/> 
+              <p>{this.state.selectedMessage.message}</p>     
+            </div>
+            : null
+          }
         </main>
       </div>
     )
