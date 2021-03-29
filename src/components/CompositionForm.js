@@ -3,7 +3,7 @@
 const CompositionForm = function(props){
 
   const sendEmail = function(){
-    let url = 'http://localhost:3001/';
+    let url = 'http://localhost:3001/send';
     let messageToSend = {
       sender: 'me@domain.com',
       recipient: 'test',
