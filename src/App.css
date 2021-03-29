@@ -45,7 +45,7 @@
 
 .message-summary{
   display: flex;
-  border: solid black;
+  border: thin solid black;
   flex-flow: column nowrap;
   justify-content: flex-start;
   grid-column: 1/2;
@@ -86,3 +86,18 @@
 #subject-field{
   min-width: 450px;
 }
+
+button#inbox{
+  margin-right: 5px;
+}
+
+button#compose {
+  margin: 5px;
+}
+
+#logo{
+  display: inline;
+  width: 10%;
+  height: 10%;
+}
+

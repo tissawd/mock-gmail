@@ -3,6 +3,7 @@ import MessageList from './components/MessageList'
 import './App.css';
 import EmailMessage from './components/EmailMessage';
 import CompositionForm from './components/CompositionForm';
+import SearchBar from './components/SearchBar'
 
 
 var url = "http://localhost:3001/";
@@ -68,10 +69,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+          <img id="logo" src="https://cdn.icon-icons.com/icons2/652/PNG/512/gmail_icon-icons.com_59877.png" alt="logo"></img>
           <h1>Gmail-ish</h1>
           <nav>
-            <button onClick={() => this.getAllMessages()}>Inbox</button>
-            <button onClick={this.openComposer}>Compose</button>
+            <button onClick={() => this.getAllMessages()} id="inbox">Inbox</button>
+            <button onClick={this.openComposer} id="compose">Compose</button>
+            <SearchBar />
           </nav>
         </header>
         <main className="main">
