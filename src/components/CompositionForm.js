@@ -6,11 +6,11 @@ const CompositionForm = function(props){
     let url = 'http://localhost:3001/send';
     let messageToSend = {
       sender: 'me@domain.com',
-      recipient: 'test',
-      subject: 'test',
-      message: 'test',
+      recipient: 'test2',
+      subject: 'test2',
+      message: 'test2',
       date: new Date(),
-      id: '123456',
+      id: '1234567',
     }
     fetch(url, {method: 'POST',
       headers: {
@@ -29,7 +29,7 @@ const CompositionForm = function(props){
         <input type="text" id="subject-field" name="subject"></input>
         <br />
         <textarea id="message-to-send" name="message"></textarea>
-        <button onClick={sendEmail()}>Send</button>
+        <button onClick={sendEmail}>Send</button>
         <button onClick={props.close}>Close</button>
       </form>
     </div>
